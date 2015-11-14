@@ -1,0 +1,6 @@
+title: Minetest Standards
+sass:
+  #  nested (default), compact, compressed, expanded
+  style: compressed
+gems:
+  - jekyll-sitemap
