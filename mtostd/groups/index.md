@@ -48,7 +48,7 @@ Edible items should all a food group with a value, rather arbitrarily defined as
 
 The number is only a suggestion to a hunger mod what your food should be worth.
 
-<aside class="warning">Warning: You will still need to add minetest.item_eat() to on_use</aside>
+<aside class="box warning">Warning: You will still need to add minetest.item_eat() to on_use</aside>
 
 Foods should also have a group to represent what they are. The group name should
 be prefixed with food_.
