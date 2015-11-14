@@ -1,7 +1,7 @@
 ---
 title: Standards
 layout: default
-root: ../../
+root: ../
 ---
 
 ## List
