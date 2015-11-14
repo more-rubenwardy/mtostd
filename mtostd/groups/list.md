@@ -11,22 +11,13 @@ links:
   url: list.html
 ---
 
-## List of Known Groups
+## About this list
 
 This is a collection of groups that fit mtostd-groups and are known to exist
 in the wild. Most of the food_* ones are added
 
-### Content
-
-* Digging Groups
-* Raw materials
-* Plants
-	* Naturally Occuring
-	* Farmed
-* Animal Products
-* Minerals and Spices
-* Food
-
+Also see [dev_wiki/Groups](http://dev.minetest.net/Groups)
+and [dev_wiki/Custom_groups](http://dev.minetest.net/Groups/Custom_groups).
 
 ## Digging Groups
 
@@ -40,44 +31,72 @@ From [lua_api.txt](http://rubenwardy.com/minetest_modding_book/lua_api.html#know
 * explody - Especially prone to explosions
 * oddly_breakable_by_hand - Torches, etc, quick to dig
 
-## Raw Materials
+## Nodes
 
-## Plants
+### Classifications
 
-### Naturally Occurring
+* liquid - node is a liquid. Ratings - water=3, lava=2.
+* water - node is water.
+* lava - node is lava.
+* sand - node is sand
+* stone - node is stone
+* wood - node is wood
 
-* food_cocoa
-* food_orange
+### Behaviour
 
-### Farmed
+* flammable - can be set on fire. Higher values mean more flammable.
+* puts_out_fire - if in a node with this group is near fire the fire gets extinguished.
+* igniter - sets flammable nodes on fire. Rating defines the radius.
+* leafdecay - node decays if no tree is in a radius of the rating.
+* not_in_creative_inventory - the item is not added to the creative inventory.
+* melty - node can be melted (used by steelblock, rating 3).
+* hot - node is hot (used by lava, rating 3).
 
-* food_carrot
-* food_flour
-* food_potato
-* food_rhubarb
-* food_strawberry
-* food_tomato
-* food_wheat
+## Items
 
-## Animal Products
+* vessel - item is a vessel.
+* dye - for all groups that are defined by the dye mod see the init.lua of it.
 
-### Diary
+## Living
 
-* food_egg
-* food_butter
-* food_cheese
-* food_cream
-* food_milk
-* food_yogurt
+### Plants
 
-### Meats
+* Classifications:
+    * tree - node is a tree. Leaves don't decay nearby.
+    * flora - node is a flower
+    * plant - node is a small-sized plant
+* Naturally growing:
+    * cocoa
+    * orange
+* Farmed:
+    * carrot
+    * flour
+    * potato
+    * rhubarb
+    * strawberry
+    * tomato
+    * wheat
 
-* meat - any cooked meat.
-* raw_meat - uncooked meat.
-* food_beef
-* food_chicken
-* food_pork
-* food_venison - deer and wild game.
+### Animal Products
+
+* Diary
+    * egg
+    * butter
+    * cheese
+    * cream
+    * milk
+    * yogurt
+* Meats
+    * meat - any cooked meat.
+    * raw_meat - uncooked meat.
+    * food_beef
+    * food_chicken
+    * food_pork
+    * food_venison - deer and wild game.
+
+### Inedible
+
+* wool - node is wool (default rating: 1)
 
 ## Minerals and Spices
 
@@ -85,12 +104,7 @@ From [lua_api.txt](http://rubenwardy.com/minetest_modding_book/lua_api.html#know
 
 ## Food
 
-* food
-	* This is rather arbitrary. Take this as a suggestion from the item definer rather than a fact.
-	* food=1 - small snacks, such as apples and chocolate bars.
-	* food=2 - small meals, such as sandwiches (lunch).
-	* food=3 - normal meals, such as pasta bakes and normal cakes.
-	* food=4 - large meals, such as large roast dinners and cakes.
+* food. See the [specification](index.html#food).
 * food_chocolate - any chocolate
 	* dark_chocolate
 	* milk_chocolate
